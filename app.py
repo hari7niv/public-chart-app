@@ -141,5 +141,5 @@ def edit(id):
     else:
         return render_template('edit.html', post=post)
 if __name__ == '__main__':
-     app.run(debug=True)
+     app.run(debug=False)
     
