@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>posts</title>
+{% endblock %}
+
+
+{% block body %}
+<h1>All post</h1>
+
+<hr>
+<h1>create new post:</h1>
+<form action="/post" method="POST">
+    Post: <input type="text" name="content" id="content">
+    <br>
+    <input type="submit" value="Post">
+
+</form>
+<hr>
+
+{% for post in posts %}
+{{user}}
+<p>{{post.content}}</p>
+<a href="/post/delete/{{post.id}}">Delete</a>
+<a href="/post/edit/{{post.id}}">edit</a>
+<hr>
+{% endfor %}
+{% endblock %}
