@@ -1,19 +1,10 @@
-import streamlit
-import abc
-from datetime import timezone
-from enum import auto, unique
 from flask import Flask,render_template,redirect,request
 from flask.helpers import flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin,current_user,LoginManager,AnonymousUserMixin
-from sqlalchemy.orm import backref
-from sqlalchemy.sql import func
 from flask import Flask, render_template, request, redirect, session, g, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-import os
-import sqlite3
-from sqlalchemy.sql.functions import user
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///main.db'
